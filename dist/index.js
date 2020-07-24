@@ -5392,7 +5392,7 @@ function run() {
                 }
             }, { maxSockets: 6 } // Node.js agentOptions object to tune performance
             );
-            const tracker = snowplow_tracker_1.default.tracker([emitter], 'myTracker', 'myApp', false);
+            const tracker = snowplow_tracker_1.default.tracker([emitter], 'myTracker', 'myApp-main', false);
             tracker.trackUnstructEvent({
                 schema: 'iglu:com.snowplowanalytics.iglu/anything-a/jsonschema/1-0-0',
                 data: github.context

@@ -18,7 +18,12 @@ async function run(): Promise<void> {
       },
       {maxSockets: 6} // Node.js agentOptions object to tune performance
     )
-    const tracker = snowplow.tracker([emitter], 'myTracker', 'myApp', false)
+    const tracker = snowplow.tracker(
+      [emitter],
+      'myTracker',
+      'myApp-main',
+      false
+    )
     tracker.trackUnstructEvent({
       schema: 'iglu:com.snowplowanalytics.iglu/anything-a/jsonschema/1-0-0',
       data: github.context
