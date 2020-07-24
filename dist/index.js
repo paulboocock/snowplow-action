@@ -5382,9 +5382,9 @@ function run() {
         try {
             const emitter = snowplow_tracker_1.default.emitter('fdd71f08e6b6.ngrok.io', // Collector endpoint
             'http', // Optionally specify a method - http is the default
-            8080, // Optionally specify a port
+            80, // Optionally specify a port
             'POST', // Method - defaults to GET
-            5, // Only send events once n are buffered. Defaults to 1 for GET requests and 10 for POST requests.
+            1, // Only send events once n are buffered. Defaults to 1 for GET requests and 10 for POST requests.
             function (e) {
                 // Callback called for each request
                 if (e) {
