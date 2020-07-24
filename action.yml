@@ -10,4 +10,4 @@ runs:
   using: 'node12'
   pre: 'dist/pre/index.js'
   main: 'dist/main/index.js'
-  post: 'dist/post/post.js'
+  post: 'dist/post/index.js'
