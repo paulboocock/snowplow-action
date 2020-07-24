@@ -1,15 +1,14 @@
 {
-  "name": "typescript-action",
+  "name": "snowplow-action",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
-  "main": "lib/main.js",
+  "description": "TpeScript template action",
+  "main": "dist/main/index.js",
   "scripts": {
-    "build": "tsc && ncc build -o dist/pre src/pre.ts && ncc build -o dist/main src/main.ts && ncc build -o dist/post src/post.ts",
+    "build": "tsc && ncc build --source-map -o dist/pre src/pre.ts && ncc build --source-map -o dist/main src/main.ts && ncc build --source-map -o dist/post src/post.ts",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "ncc build --source-map",
     "test": "jest",
     "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
