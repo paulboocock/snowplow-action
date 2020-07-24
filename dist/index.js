@@ -5370,14 +5370,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(__webpack_require__(470));
 const github = __importStar(__webpack_require__(469));
-const snowplow_tracker_1 = __webpack_require__(331);
+const snowplow_tracker_1 = __importDefault(__webpack_require__(331));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const emitter = snowplow_tracker_1.snowplow.emitter('fdd71f08e6b6.ngrok.io', // Collector endpoint
+            const emitter = snowplow_tracker_1.default.emitter('fdd71f08e6b6.ngrok.io', // Collector endpoint
             'http', // Optionally specify a method - http is the default
             8080, // Optionally specify a port
             'POST', // Method - defaults to GET
@@ -5389,7 +5392,7 @@ function run() {
                 }
             }, { maxSockets: 6 } // Node.js agentOptions object to tune performance
             );
-            const tracker = snowplow_tracker_1.snowplow.tracker([emitter], 'myTracker', 'myApp', false);
+            const tracker = snowplow_tracker_1.default.tracker([emitter], 'myTracker', 'myApp', false);
             tracker.trackUnstructEvent({
                 schema: 'iglu:com.snowplowanalytics.iglu/anything-a/jsonschema/1-0-0',
                 data: github.context

@@ -1,6 +1,6 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import {snowplow} from 'snowplow-tracker'
+import snowplow from 'snowplow-tracker'
 
 async function run(): Promise<void> {
   try {
