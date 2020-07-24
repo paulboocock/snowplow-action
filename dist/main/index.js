@@ -1855,7 +1855,7 @@ const snowplow_tracker_1 = __importDefault(__webpack_require__(331));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const emitter = snowplow_tracker_1.default.emitter('fdd71f08e6b6.ngrok.io', // Collector endpoint
+            const emitter = snowplow_tracker_1.default.emitter('07cccea4143a.ngrok.io', // Collector endpoint
             'http', // Optionally specify a method - http is the default
             80, // Optionally specify a port
             'POST', // Method - defaults to GET
