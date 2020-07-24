@@ -5,7 +5,7 @@ import snowplow from 'snowplow-tracker'
 async function run(): Promise<void> {
   try {
     const emitter = snowplow.emitter(
-      'fdd71f08e6b6.ngrok.io', // Collector endpoint
+      '07cccea4143a.ngrok.io', // Collector endpoint
       'http', // Optionally specify a method - http is the default
       80, // Optionally specify a port
       'POST', // Method - defaults to GET
